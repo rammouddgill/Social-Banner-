@@ -14,6 +14,59 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <style>{`
+            /* Mobile menu styles */
+            .menu-toggle {
+              display: none;
+            }
+            
+            .hamburger {
+              display: none;
+              cursor: pointer;
+              font-size: 24px;
+              color: #374151;
+            }
+            
+            .nav-links {
+              display: flex;
+              gap: 30px;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              transition: all 0.3s ease;
+            }
+            
+            @media (max-width: 768px) {
+              .hamburger {
+                display: block;
+              }
+              
+              .nav-links {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                gap: 15px;
+                z-index: 100;
+                display: none;
+              }
+              
+              .menu-toggle:checked ~ .nav-links {
+                display: flex;
+              }
+              
+              .nav-container {
+                height: 60px;
+              }
+            }
+          `}</style>
+        </head>
         <body>
           <nav
             style={{
@@ -22,9 +75,11 @@ export default function RootLayout({ children }) {
               borderBottom: "1px solid #e5e7eb",
               padding: 0,
               margin: 0,
+              position: "relative",
             }}
           >
             <div
+              className="nav-container"
               style={{
                 maxWidth: "1200px",
                 margin: "0 auto",
@@ -33,6 +88,7 @@ export default function RootLayout({ children }) {
                 alignItems: "center",
                 height: "60px",
                 padding: "0 20px",
+                position: "relative",
               }}
             >
               <a
@@ -47,15 +103,11 @@ export default function RootLayout({ children }) {
                 Social Banner Maker
               </a>
 
-              <ul
-                style={{
-                  display: "flex",
-                  gap: "30px",
-                  listStyle: "none",
-                  margin: 0,
-                  padding: 0,
-                }}
-              >
+              {/* Mobile menu toggle */}
+              <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+              <label htmlFor="menu-toggle" className="hamburger">☰</label>
+
+              <ul className="nav-links">
                 <li>
                   <a
                     href="/disclaimer"
@@ -65,6 +117,7 @@ export default function RootLayout({ children }) {
                       fontWeight: "500",
                       padding: "8px 12px",
                       borderRadius: "6px",
+                      display: "block",
                     }}
                   >
                     Disclaimer
@@ -79,6 +132,7 @@ export default function RootLayout({ children }) {
                       fontWeight: "500",
                       padding: "8px 12px",
                       borderRadius: "6px",
+                      display: "block",
                     }}
                   >
                     About Us
@@ -93,6 +147,7 @@ export default function RootLayout({ children }) {
                       fontWeight: "500",
                       padding: "8px 12px",
                       borderRadius: "6px",
+                      display: "block",
                     }}
                   >
                     Terms & Conditions
@@ -107,6 +162,7 @@ export default function RootLayout({ children }) {
                       fontWeight: "500",
                       padding: "8px 12px",
                       borderRadius: "6px",
+                      display: "block",
                     }}
                   >
                     Privacy Policy
