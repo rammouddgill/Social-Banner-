@@ -1,6 +1,6 @@
 // components/Navbar.js - Server Component (SEO friendly)
 
-export default function Navbar() {
+function Navbar() {
   return (
     <nav
       style={{
@@ -104,3 +104,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;
