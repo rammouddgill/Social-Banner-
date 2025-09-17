@@ -27,7 +27,7 @@ export default function Home() {
   const fetchRequest = async () => {
     try {
       const data = await fetch(
-        `https://api.unsplash.com/search/photos?page=${page}&query=${searchTerm}/${selectedOption}&per_page=30&client_id=-bwiXLh2RUEgi3zMV4whsoSF9KybHgpoBUTq-Krmels`
+        `https://api.unsplash.com/search/photos?page=${page}&query=${searchTerm}/${selectedOption}&per_page=30&client_id=bCsUFvPO3RMfVgu4xlz7KdTZVFX6CNsDstU5Tn8mWJk`
       );
 
       const dataJ = await data.json();
