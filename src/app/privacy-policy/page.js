@@ -78,7 +78,7 @@ function Privacy() {
                     textDecoration: "none",
                     color: "white",
                   }}
-                  href="/privacy"
+                  href="/privacy-policy"
                 >
                   Privacy
                 </Link>
@@ -91,7 +91,7 @@ function Privacy() {
                     textDecoration: "none",
                     color: "white",
                   }}
-                  href="/termsandcondition"
+                  href="/terms-and-conditions"
                 >
                   Term & Condition
                 </Link>
