@@ -87,7 +87,7 @@ function disclaimer() {
                   cursor: "pointer",
                   color: "white",
                 }}
-                href="/privacy"
+                href="/privacy-policy"
               >
                 Privacy
               </Link>
@@ -100,7 +100,7 @@ function disclaimer() {
                   textDecoration: "none",
                   color: "white",
                 }}
-                href="/termsandcondition"
+                href="/terms-and-conditions"
               >
                 Term & Condition
               </Link>
