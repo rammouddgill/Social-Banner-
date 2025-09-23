@@ -19,27 +19,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        {/* Adsense Script */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1372961687955165"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-
-        {/* Ad Slot */}
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-client="ca-pub-1372961687955165"
-          data-ad-slot="8374247525"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
-
-        <Script id="ads-init" strategy="afterInteractive">
-          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-        </Script>
+        
 
         {children}
       </body>
