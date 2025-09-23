@@ -19,7 +19,20 @@ export default function RootLayout({ children }) {
     <meta name="google-adsense-account" content="ca-pub-1372961687955165">
           
         </head>
-        <body>{children}</body>
+        <body>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1372961687955165"
+     crossorigin="anonymous"></script>
+<!-- hr1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1372961687955165"
+     data-ad-slot="8374247525"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  {children}</body>
       </html>
     </>
   );
