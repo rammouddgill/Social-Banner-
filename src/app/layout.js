@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="google-adsense-account" content="ca-pub-1946451267772348"/>
+          <meta name="google-adsense-account" content="ca-pub-9830530451105892"/>
         </head>
         <body>{children}</body>
       </html>
