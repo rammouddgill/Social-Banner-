@@ -20,7 +20,20 @@ export default function RootLayout({ children }) {
          
        
         </head>
-        <body>{children}</body>
+        <body>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5099693760269807"
+     crossorigin="anonymous"></script>
+<!-- 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5099693760269807"
+     data-ad-slot="4832798545"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  {children}</body>
       </html>
     </>
   );
