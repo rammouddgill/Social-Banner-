@@ -12,27 +12,40 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <html lang="en">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="google-adsense-account" content="ca-pub-1946451267772348"/>
-        </head>
-        <body>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1946451267772348"
-     crossorigin="anonymous"></script>
-<!-- 1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1946451267772348"
-     data-ad-slot="2381114778"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  {children}</body>
-      </html>
-    </>
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-1946451267772348"
+        />
+      </head>
+      <body>
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1946451267772348"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
+        {/* Ad Slot */}
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-1946451267772348"
+          data-ad-slot="2381114778"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+
+        {/* Initialize AdSense */}
+        <Script id="ads-init" strategy="afterInteractive">
+          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+        </Script>
+
+        {children}
+      </body>
+    </html>
   );
 }
