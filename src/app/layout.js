@@ -18,7 +18,20 @@ export default function RootLayout({ children }) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="google-adsense-account" content="ca-pub-1946451267772348"/>
         </head>
-        <body>{children}</body>
+        <body>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1946451267772348"
+     crossorigin="anonymous"></script>
+<!-- 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1946451267772348"
+     data-ad-slot="2381114778"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  {children}</body>
       </html>
     </>
   );
