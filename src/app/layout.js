@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <body>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5099693760269807"
      crossorigin="anonymous"></script>
-<!-- 1 -->
+
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5099693760269807"
