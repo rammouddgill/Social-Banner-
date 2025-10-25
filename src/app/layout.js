@@ -12,30 +12,39 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <html lang="en">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          
-          <meta name="google-adsense-account" content="ca-pub-5203051277905356"/>
-        </head>
-        <body>
-  
-  <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5203051277905356"
-     crossorigin="anonymous" strategy="afterInteractive"></Script>
-<!-- 1 -->
-<ins class="adsbygoogle"
-         style={{ display: "block" }}
-     data-ad-client="ca-pub-5203051277905356"
-     data-ad-slot="8724091452"
-     data-ad-format="auto"
-     data-full-width-responsive="true" ></ins>
- {/* Initialize AdSense */}
-      <Script id="ads-init" strategy="afterInteractive">
-        {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-      </Script>
-  {children}</body>
-      </html>
-    </>
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-5203051277905356"
+        />
+        {/* Load AdSense script properly */}
+        <Script
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5203051277905356"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body>
+        {/* Example Ad Unit */}
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-5203051277905356"
+          data-ad-slot="8724091452"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+
+        {/* Initialize AdSense */}
+        <Script id="ads-init" strategy="afterInteractive">
+          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+        </Script>
+
+        {children}
+      </body>
+    </html>
   );
 }
