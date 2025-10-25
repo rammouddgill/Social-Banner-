@@ -22,17 +22,18 @@ export default function RootLayout({ children }) {
         <body>
   
   <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5203051277905356"
-     crossorigin="anonymous"></Script>
+     crossorigin="anonymous" strategy="afterInteractive"></Script>
 <!-- 1 -->
 <ins class="adsbygoogle"
-     style="display:block"
+         style={{ display: "block" }}
      data-ad-client="ca-pub-5203051277905356"
      data-ad-slot="8724091452"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<Script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</Script>
+     data-full-width-responsive="true" ></ins>
+ {/* Initialize AdSense */}
+      <Script id="ads-init" strategy="afterInteractive">
+        {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+      </Script>
   {children}</body>
       </html>
     </>
