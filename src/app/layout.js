@@ -16,31 +16,35 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="google-adsense-account" content="ca-pub-5115629776202373"/>
+        <meta
+            name="google-adsense-account"
+            content="ca-pub-5115629776202373"
+          />
         </head>
         <body>
-   {/* Google AdSense Script */}
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5115629776202373"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
+          {/* Google AdSense Script */}
+          <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5115629776202373"
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
 
-      {/* 1 */}
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-5115629776202373"
-        data-ad-slot="6618956267"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+          {/* 1 */}
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-5115629776202373"
+            data-ad-slot="6618956267"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
 
-      {/* Initialize AdSense */}
-      <Script id="ads-init" strategy="afterInteractive">
-        {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-      </Script>
+          {/* Initialize AdSense */}
+          <Script id="ads-init" strategy="afterInteractive">
+            {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+          </Script>
+
       {children}</body>
       </html>
     </>
