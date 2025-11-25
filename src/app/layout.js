@@ -13,35 +13,35 @@ export default function RootLayout() {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Google AdSense Script */}
+       <meta
+          name="google-adsense-account"
+          content="ca-pub-5203051277905356"
+        />
+        {/* Load AdSense script properly */}
         <Script
           async
           strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2590992141479979"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5203051277905356"
           crossOrigin="anonymous"
         />
       </head>
-
       <body>
-        {/* ------------ TOP AD ------------ */}
-        <div style={{ marginBottom: "20px" }}>
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-2590992141479979"
-            data-ad-slot="4241303380"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
+        {/* Example Ad Unit */}
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-5203051277905356"
+          data-ad-slot="8724091452"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
 
-          <Script
-            id="adsbygoogle-top-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `(adsbygoogle = window.adsbygoogle || []).push({});`,
-            }}
-          />
-        </div>
+        {/* Initialize AdSense */}
+        <Script id="ads-init" strategy="afterInteractive">
+          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+        </Script>
+
+    
 
         {/* ================================
             HIGH CPC ARTICLE (USA)
