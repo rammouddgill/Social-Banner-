@@ -67,24 +67,7 @@ export default function RootLayout() {
           </ul>
 
           {/* MID ARTICLE AD */}
-          <div style={{ margin: "30px 0" }}>
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-2590992141479979"
-              data-ad-slot="4241303380"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-
-            <Script
-              id="adsbygoogle-mid-init"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `(adsbygoogle = window.adsbygoogle || []).push({});`,
-              }}
-            />
-          </div>
+         
 
           <h2>🏦 Best High-Interest Savings Accounts (USA 2025)</h2>
 
