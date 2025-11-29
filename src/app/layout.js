@@ -7,7 +7,7 @@ export const metadata = {
     "Easily create your LinkedIn banner. Creating your LinkedIn banner is super easy with Linkedin social banner maker. Linkedin social banner maker is free to try.",
 };
 
-export default function RootLayout() {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
@@ -42,10 +42,9 @@ export default function RootLayout() {
             }}
           />
         </div>
- {children}
-         
 
-         
+        {/* ------------ PAGE CONTENT ------------ */}
+        {children}
       </body>
     </html>
   );
