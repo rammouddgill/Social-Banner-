@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Professional LinkedIn Banners in Minutes",
@@ -12,14 +9,40 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <html lang="en">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          
-        </head>
-        <body>{children}</body>
-      </html>
-    </>
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+
+      <body>
+        {/* ✅ Load AdSense Script */}
+        <Script
+          id="adsense-script"
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4949037439173081"
+          crossOrigin="anonymous"
+        />
+
+        {/* ✅ TOP AUTO RESPONSIVE AD */}
+        <div style={{ width: "100%", marginBottom: "10px" }}>
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-4949037439173081"
+            data-ad-slot="1053339511"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+
+          <Script id="adsense-push" strategy="afterInteractive">
+            {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+          </Script>
+        </div>
+
+        {/* ✅ Page Content */}
+        {children}
+      </body>
+    </html>
   );
 }
